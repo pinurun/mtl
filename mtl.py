@@ -67,7 +67,5 @@ dispatcher.add_handler(logger_handler)
 
 __log__ = logging.getLogger()
 __log__.info("GG-MTL Started..")
-updater.start_polling()
 
-if __name__ == '__main__':
-    main()
+updater.start_polling()

@@ -30,7 +30,7 @@ dispatcher = updater.dispatcher
 
 def Start(update, context):
     data = '/GGMutualan\
-    \nSilahkan isi form dibawah\n\nNama       : \nUmur        :\nTiktok       :\nInstagram    :\n\n(boleh ditambah dan hapus jika tidak ada)'
+    \nSilahkan isi form dibawah\n\nNama       : \nUmur        : \nTiktok       : \nInstagram    : \n\n(boleh ditambah dan hapus jika tidak ada)'
     update.message.reply_text(data, parse_mode=ParseMode.MARKDOWN)
 
 def Reply(update, context):

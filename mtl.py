@@ -29,7 +29,7 @@ updater = Updater(token=TOKEN, use_context=True)
 dispatcher = updater.dispatcher 
 
 def Start(update, context):
-    data = '/notif\
+    data = '/GGMutualan\
     \nSilahkan isi form dibawah\n\nNama       : \nUmur        :\nTiktok       :\nInstagram    :\n\n(boleh ditambah dan hapus jika tidak ada)'
     update.message.reply_text(data, parse_mode=ParseMode.MARKDOWN)
 
@@ -41,7 +41,7 @@ def SendToCreator(update, context):
     name = update.effective_message.from_user.first_name
     msg = update.effective_message
     text = update.effective_message.text
-    frst = text.replace("/notif", "")
+    frst = text.replace("/GGMutualan", "")
     scn = frst.replace("Silahkan isi form dibawah\n\n", "")
     gg = scn.replace("(boleh ditambah dan hapus jika tidak ada)", "")
     chat_id = update.effective_chat.id
@@ -57,7 +57,7 @@ def Log(update, context):
 
 start_handler = CommandHandler("start", Start)
 reply_handler = CommandHandler("reply", Reply)
-feedback_handler = CommandHandler("notif", SendToCreator)
+feedback_handler = CommandHandler("GGMutualan", SendToCreator)
 logger_handler = CommandHandler("log", Log)
 
 dispatcher.add_handler(start_handler)
